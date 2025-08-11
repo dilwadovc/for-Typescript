@@ -1,0 +1,136 @@
+:root {
+  --bg: #1E4DB7;
+  --logo-bg: #3178C6;
+  --btn-green: #2FB673;
+  --btn-green-hover: #27935a;
+  --white: #ffffff;
+  --card-pad: 28px;
+  --max-w: 760px;
+  --radius: 14px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.hero {
+  width: 100%;
+  max-width: var(--max-w);
+  padding: var(--card-pad);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  backdrop-filter: blur(0.5px);
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  border-radius: 12px;
+  background: var(--logo-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--white);
+  font-size: 22px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+.content {
+  flex: 1;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.02;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+  font-weight: 800;
+}
+
+p.lead {
+  color: rgba(255,255,255,0.92);
+  font-size: 16px;
+  margin-bottom: 18px;
+  max-width: 60ch;
+}
+
+.cta {
+  display: inline-block;
+  background: var(--btn-green);
+  color: var(--white);
+  padding: 12px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(43,160,114,0.18);
+  transition: transform .14s ease, background .14s ease;
+}
+.cta:hover {
+  transform: translateY(-3px);
+  background: var(--btn-green-hover);
+}
+
+@media (max-width: 760px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  .left {
+    flex-direction: row;
+    align-items: center;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  .logo {
+    width: 54px;
+    height: 54px;
+    min-width: 54px;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+  .content {
+    width: 100%;
+  }
+  p.lead {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  h1 {
+    font-size: 28px;
+  }
+  .cta {
+    padding: 10px 18px;
+  }
+}
