@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript Kursi - Asosiy Sahifa</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>📚 TypeScript Asoslari</h1>
+        <p>JavaScript’dan kuchliroq va ishonchliroq dasturlash tili </p>
+        <h1>1-dars TypeScript nima?</h1>
+    </header>
+
+
+    <main>
+        <section class="lesson">
+            <h2>1️⃣ TypeScript nima?</h2>
+            <p>
+                TypeScript — bu Microsoft tomonidan yaratilgan va JavaScript’ning kengaytirilgan versiyasi.
+                U kuchli tiplar (strong types), interfeyslar va boshqa qo‘shimcha imkoniyatlar bilan JavaScript’ni yanada qulay qiladi.
+            </p>
+        </section>
+
+        <section class="lesson">
+            <h2>2️⃣ O‘zgaruvchilar</h2>
+            <p>TypeScript’da o‘zgaruvchi e’lon qilishda <code>let</code> yoki <code>const</code> ishlatiladi va uning turi aniqlanadi:</p>
+            <pre><code>let age: number = 25;
+let name: string = "Ali";
+const isActive: boolean = true;</code></pre>
+        </section>
+
+        <section class="lesson">
+            <h2>3️⃣ Funksiyalar</h2>
+            <p>Funksiyalarda ham argument va qaytish turi ko‘rsatiladi:</p>
+            <pre><code>function add(a: number, b: number): number {
+    return a + b;
+}</code></pre>
+        </section>
+
+        <!-- Test bo‘limi -->
+        <section class="quiz">
+            <h2>📝 Mini-test</h2>
+            <div id="quiz-container">
+                <div class="question">
+                    <p>1. TypeScript’ni kim yaratgan?</p>
+                    <label><input type="radio" name="q1" value="wrong"> Google</label>
+                    <label><input type="radio" name="q1" value="correct"> Microsoft</label>
+                    <label><input type="radio" name="q1" value="wrong"> Facebook</label>
+                </div>
+                <div class="question">
+                    <p>2. TypeScript’da o‘zgaruvchi e’lon qilish uchun qaysi kalit so‘z ishlatilmaydi?</p>
+                    <label><input type="radio" name="q2" value="wrong"> let</label>
+                    <label><input type="radio" name="q2" value="wrong"> const</label>
+                    <label><input type="radio" name="q2" value="correct"> var</label>
+                </div>
+                <div class="question">
+                    <p>3. Quyidagi kodda <code>a</code> ning turi qanday?<br><code>let a: string = "Hello"</code></p>
+                    <label><input type="radio" name="q3" value="correct"> string</label>
+                    <label><input type="radio" name="q3" value="wrong"> number</label>
+                    <label><input type="radio" name="q3" value="wrong"> boolean</label>
+                </div>
+            </div>
+            <button id="check-btn">Natijani ko‘rish</button>
+            <div id="result"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 TypeScript Kursi | Doniyor bilan o‘rganing</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
